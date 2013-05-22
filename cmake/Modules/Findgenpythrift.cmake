@@ -167,7 +167,7 @@ macro(_generate_srv_pythrift ARG_PKG ARG_SRV ARG_IFLAGS ARG_MSG_DEPS ARG_GEN_OUT
   set(GEN_OUTPUT_FILE ${GEN_OUTPUT_DIR}/${SRV_GENERATED_NAME})
 
   add_custom_command(OUTPUT ${GEN_OUTPUT_FILE}
-    COMMAND ${CATKIN_ENV} "/usr/bin/thrift"
+    COMMAND ${CATKIN_ENV} "thrift"
     -out ${GEN_OUTPUT_DIR}
     -r
     --gen py
@@ -176,7 +176,7 @@ macro(_generate_srv_pythrift ARG_PKG ARG_SRV ARG_IFLAGS ARG_MSG_DEPS ARG_GEN_OUT
     )
 
   add_custom_command(OUTPUT ${GEN_OUTPUT_DIR}_twisted/${SRV_GENERATED_NAME}
-    COMMAND ${CATKIN_ENV} "/usr/bin/thrift"
+    COMMAND ${CATKIN_ENV} "thrift"
     -out ${GEN_OUTPUT_DIR}_twisted
     -r
     --gen py:twisted
