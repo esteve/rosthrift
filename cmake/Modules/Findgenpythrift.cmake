@@ -156,7 +156,7 @@ endmacro()
 #todo, these macros are practically equal. Check for input file extension instead
 macro(_generate_srv_pythrift ARG_PKG ARG_SRV ARG_IFLAGS ARG_MSG_DEPS ARG_GEN_OUTPUT_DIR)
   #Append msg to output dir
-  set(GEN_OUTPUT_DIR "${ARG_GEN_OUTPUT_DIR}/thrift")
+  set(GEN_OUTPUT_DIR "${ARG_GEN_OUTPUT_DIR}/genpythrift")
   file(MAKE_DIRECTORY ${GEN_OUTPUT_DIR})
   file(MAKE_DIRECTORY ${GEN_OUTPUT_DIR}_twisted)
 
